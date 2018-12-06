@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="style/jquery-ui.min.css" rel="stylesheet" type="text/css">
+	<link href="style/style.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery-3.1.1.min.js" type="text/javascript">
+	</script>
+	<script src="js/jquery-ui.min.js" type="text/javascript">
+	</script>
+	<script src="js/script.js" type="text/javascript">
+	</script>
+	<title>BlackJack</title>
+</head>
+<body onload="playGame();">
+ 
+	<div id = "bust">
+	<h2> YOU BUSTED </h2> 
+	</div>
+	<div id = "money">
+	<h2> YOU DON'T HAVE ENOUGH MONEY </h2>
+	</div>
+	<div id = "notValid">
+	<h2> YOU CAN'T BET NOTHING </h2>
+	</div>
+
+	<div id = "dealerCards"> </div>	
+	<h1 class = "dealer"> Dealer Hand </h1>
+	
+	<div id = "display" > </div>
+
+	<center>
+	<div id = "title"> <h3> BLACKJACK </h3> </div>
+	<div id = "placeBet"> <h3> Place Your Bet (Click on the Chips to add Money to Pot)</h3> </div>
+	<div id = "wallet"> </div>
+	<img src = "images/1_Chip.png" class = "chips" onclick = "chip(1)" style = "width: 8%">
+	<img src = "images/5_Chip.png" class = "chips" onclick = "chip(5)" style = "width: 8%">
+	<img src = "images/25_Chip.png" class = "chips" onclick = "chip(25)" style = "width: 8%">
+	<img src = "images/100_Chip.png" class = "chips" onclick = "chip(100)" style = "width: 8%">
+	<div id = "bet"> </div>
+	<div id = "doneBet">
+	<input type="button" class = "button" onclick = "doneBet();" value="Done Betting">
+	<input type="button" class = "button" onclick = "resetBet();" value="Reset Bet">
+	</div>
+	<div id="doneBet2" title="Finished Betting?"> </div>
+	</center>
+
+	<h1 class = "player"> Your Hand </h1> 
+	<div id = "playerCards">
+		<form>
+			<input onclick="hit(false);" type="button" class = "button" value="Hit Me"> 
+		</form>
+		<form>
+			<input onclick="stand();" type="button" class = "button" value="Stand"> 
+		</form>
+		<form>
+			<input onclick="doubleDown();" type="button" class = "button" value="Double Down"> 
+		</form>
+	</div>
+</body>
+</html>
